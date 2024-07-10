@@ -1,0 +1,90 @@
+.news-card {
+  background-color: #8b8b8b;
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgb(179, 196, 80);
+  margin: 20px;
+  padding: 20px;
+  max-width: 300px;
+  transition: transform 0.2s;
+  backdrop-filter: blur(10px); /* Corrected property name and value */
+  -webkit-backdrop-filter: blur(10px); /* WebKit prefix */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.news-card:hover {
+  transform: scale(1.05);
+}
+
+.news-image {
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.news-card h2 {
+  color: #a30000;
+  font-size: 1.5em;
+  margin: 10px 0;
+  height: 100px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.news-card p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  height: 100px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+
+
+
+.news-card .link {
+  --b: 5px;   /* border thickness */
+  --s: .55em; /* size of the corner */
+  --color: #00ff2a;
+  
+  padding: calc(.4em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#3205b800 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0f269a00;
+  outline-offset: .6em;
+  font-size: 18px;
+  width: 122px;
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.news-card .link:hover,
+.news-card .link:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.news-card .link:active {
+  background: var(--color);
+  color: #fff;
+}
+.news-card a{
+  text-decoration: none;
+
+  color: #00ff04;
+  font-weight: bold;
+}
